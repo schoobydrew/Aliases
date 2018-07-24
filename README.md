@@ -21,11 +21,13 @@ alias sha1='sha1sum'
 
 alias pingr='fping -s -c 1 -f ips.txt'
 
-alias nmapTCP='nmap -sSV -Pn -oG TCP -iL ips.txt --top-ports'
+alias nmapTCP='nmap -sSV -Pn -oG TCP -iL ips.txt --top-ports 4000'
 
-alias nmapUDP='nmap -sUV -Pn -oG UDP -iL ips.txt --top-ports'
+alias nmapUDPextra='nmap -sUV -Pn -oG UDPextra -iL ips.txt --top-ports 100'
 
-alias nmapSCAN='nmapTCP 4000 && nmapUDP 100'
+alias nmapUDP = 'nmap -sUV -Pn -oG UDP -iL ips.txt -p'
+
+alias nmapSCAN='nmapTCP && nmapUDPextra'
 
 alias ikescan='ike-scan -A -M -n bob -Ppsk'
 
