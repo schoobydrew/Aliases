@@ -7,6 +7,10 @@ alias lsa='ls -a'
 
 alias ~='cd ~'
 
+alias c='clear'
+
+alias shutoff='shutdown 0'
+
 alias parser='~/parser.py'
 
 alias discover='~/discover/discover.sh'
@@ -30,6 +34,3 @@ alias nmapUDP = 'nmap -sUV -Pn -oG UDP -iL ips.txt -p'
 alias nmapSCAN='nmapTCP && nmapUDPextra'
 
 alias ikescan='ike-scan -A -M -n bob -Ppsk'
-
-alias shutoff='shutdown 0'
-
