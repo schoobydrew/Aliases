@@ -27,10 +27,8 @@ alias pingr='fping -s -c 1 -f ips.txt'
 
 alias nmapTCP='nmap -sSV -Pn -oG TCP -iL ips.txt --top-ports 4000'
 
-alias nmapUDPextra='nmap -sUV -Pn -oG UDPextra -iL ips.txt --top-ports 100'
+alias nmapUDP='nmap -sUV -Pn -oG UDPextra -iL ips.txt --top-ports 100'
 
-alias nmapUDP = 'nmap -sUV -Pn -oG UDP -iL ips.txt -p'
-
-alias nmapSCAN='nmapTCP && nmapUDPextra'
+alias nmapSCAN='nmapTCP && nmapUDP'
 
 alias ikescan='ike-scan -A -M -n bob -Ppsk'
